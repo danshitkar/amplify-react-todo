@@ -27,7 +27,7 @@ function App() {
   return (
     <main>
       <h1>{user?.signInDetails?.loginId}'s cute lil todos 💕✨</h1>
-      <button onClick={createTodo}>+ new</button>
+      <button onClick={createTodo}>+ Add new task</button>
       <ul>
         {todos.map((todo) => (
           <li onClick={() => deleteTodo(todo.id)} key={todo.id}>
@@ -37,11 +37,8 @@ function App() {
         ))}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
+        Clicking on "+ Add new task" creates a new todo. | Clicking on the todo
+        deletes it. | Click below to sign out.
       </div>
       <button onClick={signOut}>Sign out</button>
     </main>
